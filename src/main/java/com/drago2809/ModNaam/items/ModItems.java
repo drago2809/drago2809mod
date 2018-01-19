@@ -37,6 +37,7 @@ public final class ModItems {
 	// electric parts
 	public static Item battery;// battery
 	public static Item electricity;// electricity  
+	public static Item thunderbolt;// thunderbolt test
 	
 	// compressor
 	public static Item compressorBottom;// compressor part bottom
@@ -87,7 +88,7 @@ public final class ModItems {
 		
 		// electric parts
 		GameRegistry.registerItem(battery = new BasicItem("battery"), "battery");// battery 
-		GameRegistry.registerItem(electricity = new BasicItem("electricity"), "electricity");// electricity
+	//	GameRegistry.registerItem(electricity = new BasicItem("electricity"), "electricity");// electricity
 		
 		// compressor
 		GameRegistry.registerItem(compressorBottom = new BasicItem("compressor_bottom"), "compressor_bottom");// compressor part bottom
@@ -99,8 +100,8 @@ public final class ModItems {
 		// tools
 		GameRegistry.registerItem(hammer = new BasicItem("hammer"), "hammer");// hammer
 		GameRegistry.registerItem(wrench = new BasicItem("wrench"), "wrench");// wrench
-
-
+		GameRegistry.registerItem(electricity = new ItemElectricity("electricity", Tutorial), "electricity");
+		GameRegistry.registerItem(thunderbolt = new ItemThunderbolt(), "thunderbolt");
 		
 		//handleiding
 		GameRegistry.registerItem(naamVoorwerp = new BasicItem("naam_voorwerp"), "naam_voorwerp");// naam van het voorwerp
