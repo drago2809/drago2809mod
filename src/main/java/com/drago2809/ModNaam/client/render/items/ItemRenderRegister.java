@@ -31,7 +31,7 @@ public final class ItemRenderRegister {
 	
 		// electric parts
 		Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(ModItems.battery, 0, new ModelResourceLocation("dmm:battery", "inventory"));// battery		
-		//Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(ModItems.electricity, 0, new ModelResourceLocation("dmm:electricity", "inventory"));// electricity		
+		Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(ModItems.electricity, 0, new ModelResourceLocation("dmm:electricity", "inventory"));// electricity		
 		
 		// compressor
 		Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(ModItems.compressorBottom,  0, new ModelResourceLocation("dmm:compressor_bottom", "inventory"));// compressor bottom
@@ -43,8 +43,7 @@ public final class ItemRenderRegister {
 		// tools
 		Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(ModItems.hammer, 0, new ModelResourceLocation("dmm:hammer", "inventory"));// hammer
 		Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(ModItems.wrench,  0, new ModelResourceLocation("dmm:wrench", "inventory"));// wrench
-		Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(ModItems.thunderbolt, 0, new ModelResourceLocation("dmm:thunderbolt", "inventory"));
-		
+			
 		// handleiding
 		Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(ModItems.naamVoorwerp, 0, new ModelResourceLocation("dmm:naam_voorwerp", "inventory"));// naam van het voorwerp invullen
 			

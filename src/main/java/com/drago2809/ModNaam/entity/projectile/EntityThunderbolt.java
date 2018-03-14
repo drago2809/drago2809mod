@@ -39,7 +39,7 @@ public class EntityThunderbolt extends EntityThrowable {
     {
         if (result.entityHit != null)
         {
-            int i = 0;
+            int i = 1000;
 
             if (result.entityHit instanceof EntityBlaze)
             {

@@ -21,7 +21,6 @@ public final class BlockRenderRegister {
 		Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(Item.getItemFromBlock(ModBlocks.aluminumBlock), 0, new ModelResourceLocation("dmm:aluminum_block", "inventory"));// aluminum block
 		Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(Item.getItemFromBlock(ModBlocks.lithiumBlock), 0, new ModelResourceLocation("dmm:lithium_block", "inventory"));// lithium block
 		
-		
 		// handleiding
 		Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(Item.getItemFromBlock(ModBlocks.naamBlok), 0, new ModelResourceLocation("dmm:naam_blok", "inventory"));// naam van het blok invullen
 	

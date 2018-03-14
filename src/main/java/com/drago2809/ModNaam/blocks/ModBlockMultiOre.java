@@ -18,7 +18,7 @@ public class ModBlockMultiOre extends Block {
     public ModBlockMultiOre(String unlocalizedName, Material material) {
         super(material);
         this.setUnlocalizedName(unlocalizedName);
-        this.setCreativeTab(ModItems.tabModNaam);
+        this.setCreativeTab(ModBlocks.tabHandleiding);
         this.setHardness(10.0f);
         this.setResistance(20.0f);
         this.setHarvestLevel("pickaxe", 2);

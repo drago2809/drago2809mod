@@ -1,7 +1,10 @@
 package com.drago2809.ModNaam.blocks;
 
+import com.drago2809.ModNaam.items.ModItems;
+
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
+import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
@@ -20,6 +23,7 @@ public final class ModBlocks {
 	public static Block steelBlock;// steel block
 	public static Block aluminumBlock;// aluminum block
 	public static Block lithiumBlock;// lithium block
+
 	
 	
 	// handleiding
@@ -43,14 +47,18 @@ public final class ModBlocks {
 		GameRegistry.registerBlock(steelBlock = new BasicBlock("steel_block"), "steel_block");// steel block
 		GameRegistry.registerBlock(aluminumBlock = new BasicBlock("aluminum_block"), "aluminum_block"); // aluminium block
 		GameRegistry.registerBlock(lithiumBlock = new BasicBlock( "lithium_block"), "lithium_block");// lithium block
-		
+
 		
 		// handleiding
-		GameRegistry.registerBlock(naamBlok = new BasicBlock("naam_blok"), "naam_blok");// naam_blok =naam van het blok invullen
+		GameRegistry.registerBlock(naamBlok = new BasicBlockHandleiding("naam_blok"), "naam_blok");// naam_blok =naam van het blok invullen
 		
 		// tutorial
-		GameRegistry.registerBlock(tutorialBlock = new BasicBlock("tutorial_block").setLightLevel(1.0f), "tutorial_block");// tutorial block
+		GameRegistry.registerBlock(tutorialBlock = new BasicBlockHandleiding("tutorial_block").setLightLevel(1.0f), "tutorial_block");// tutorial block
 		GameRegistry.registerBlock(tutorialMultiOre = new ModBlockMultiOre("tutorial_multi_ore", Material.IRON), "tutorial_multi_ore");// tutorial multi ore
 	}
-
+	public static final CreativeTabs tabHandleiding = new CreativeTabs("handleiding") {
+		@Override public Item getTabIconItem() {
+			return ModItems.naamVoorwerp;
+		}
+	};
 }

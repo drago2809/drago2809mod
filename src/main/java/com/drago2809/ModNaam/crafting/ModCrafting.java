@@ -28,6 +28,9 @@ public static void addRecipes() {
 	
 	// electric parts
 	GameRegistry.addRecipe(new ItemStack(ModItems.battery, 1), new Object[] {" $ ", "%#%", "%%%", '#', ModItems.lithiumIngot, '$', ModItems.copperIngot, '%', Items.IRON_INGOT});// 5 iron ingots + lithium ingot + copper ingot -> battery
+	GameRegistry.addRecipe(new ItemStack(ModItems.compressorBasisIronGear, 1), new Object[] {" # ", "!@$", " & ", '#', ModItems.compressorTop, '!', ModItems.battery, '@', ModItems.ironGear, '$', Items.REDSTONE, '&', ModItems.compressorBottom});
+	GameRegistry.addRecipe(new ItemStack(ModItems.compressorBasisSteelGear, 1), new Object[] {" # ", "!@$", " & ", '#', ModItems.compressorTop, '!', ModItems.battery, '@', ModItems.steelGear, '$', Items.REDSTONE, '&', ModItems.compressorBottom});
+	GameRegistry.addRecipe(new ItemStack(ModItems.compressorBasisDiamondGear, 1), new Object[] {" # ", "!@$", " & ", '#', ModItems.compressorTop, '!', ModItems.battery, '@', ModItems.diamondGear, '$', Items.REDSTONE, '&', ModItems.compressorBottom});
 	
 	// compressor
 	GameRegistry.addRecipe(new ItemStack(ModItems.compressorBottom, 1), new Object[] {"   ", "   ", "###", '#', ModItems.steelPlate});// 3 iron plate -> compressor bottom

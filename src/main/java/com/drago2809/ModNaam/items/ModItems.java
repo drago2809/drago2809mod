@@ -1,8 +1,10 @@
 package com.drago2809.ModNaam.items;
 
 import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.init.Bootstrap;
 import net.minecraft.item.Item;
 import net.minecraft.item.Item.ToolMaterial;
+import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.common.util.EnumHelper;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
@@ -37,7 +39,6 @@ public final class ModItems {
 	// electric parts
 	public static Item battery;// battery
 	public static Item electricity;// electricity  
-	public static Item thunderbolt;// thunderbolt test
 	
 	// compressor
 	public static Item compressorBottom;// compressor part bottom
@@ -88,7 +89,7 @@ public final class ModItems {
 		
 		// electric parts
 		GameRegistry.registerItem(battery = new BasicItem("battery"), "battery");// battery 
-	//	GameRegistry.registerItem(electricity = new BasicItem("electricity"), "electricity");// electricity
+		GameRegistry.registerItem(electricity = new BasicItem("electricity"), "electricity");// electricity
 		
 		// compressor
 		GameRegistry.registerItem(compressorBottom = new BasicItem("compressor_bottom"), "compressor_bottom");// compressor part bottom
@@ -100,15 +101,15 @@ public final class ModItems {
 		// tools
 		GameRegistry.registerItem(hammer = new BasicItem("hammer"), "hammer");// hammer
 		GameRegistry.registerItem(wrench = new BasicItem("wrench"), "wrench");// wrench
-		GameRegistry.registerItem(electricity = new ItemElectricity("electricity", Tutorial), "electricity");
-		GameRegistry.registerItem(thunderbolt = new ItemThunderbolt(), "thunderbolt");
+
+
 		
 		//handleiding
-		GameRegistry.registerItem(naamVoorwerp = new BasicItem("naam_voorwerp"), "naam_voorwerp");// naam van het voorwerp
+		GameRegistry.registerItem(naamVoorwerp = new BasicItemHandleiding("naam_voorwerp"), "naam_voorwerp");// naam van het voorwerp
 
 		
 		//tutorial
-		GameRegistry.registerItem(tutorialItem = new BasicItem("tutorial_item"), "tutorial_item");// tutorial item
+		GameRegistry.registerItem(tutorialItem = new BasicItemHandleiding("tutorial_item"), "tutorial_item");// tutorial item
 		GameRegistry.registerItem(tutorialSword = new ItemModSword("tutorial_sword", Tutorial), "tutorial_sword");// tutorial sword
 		GameRegistry.registerItem(tutorialSpade = new ItemModSpade("tutorial_spade", Tutorial), "tutorial_spade");// tutorial spade
 		GameRegistry.registerItem(tutorialHoe = new ItemModHoe("tutorial_hoe", Tutorial), "tutorial_hoe");// tutorial hoe
@@ -127,3 +128,30 @@ public final class ModItems {
 		}
 	};
 }
+	/* private static Item getRegisteredItem(String name)
+	    {
+	  Item item = (Item)Item.REGISTRY.getObject(new ResourceLocation(name));
+
+      if (item == null)
+      {
+          throw new IllegalStateException("Invalid Item requested: " + name);
+      }
+      else
+      {
+          return item;
+      }
+  }
+
+  static
+  {
+      if (!Bootstrap.isRegistered())
+      {
+          throw new RuntimeException("Accessed Items before Bootstrap!");
+      }
+      else
+      {
+    	  ELECTRICITY = getRegisteredItem("electricity");  
+      }
+  }}
+*/
+
